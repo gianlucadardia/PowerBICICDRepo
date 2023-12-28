@@ -22,3 +22,7 @@ steps:
     PowerBIPath: '**/sqlserversourcedata.pbix'
 
 
+- task: PowerBIActions@5
+  inputs:
+    Action: 'Workspace'
+    WorkspaceName: 'testing_ws'
