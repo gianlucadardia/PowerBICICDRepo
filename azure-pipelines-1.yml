@@ -15,10 +15,11 @@ variables:
 steps:
 
 
-- task: PowerBIActions@5
+- task: CreateWS@5
   inputs:
     Action: 'Workspace'
     WorkspaceName: 'testing_ws'
+    Name: 'myname'
 
 - task: PowerBIActions@5
   inputs:
