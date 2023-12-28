@@ -6,14 +6,13 @@
 trigger:
 - main
 
-pool:
-  vmImage: windows-latest
+pool: cicdvm
+#  vmImage: windows-latest
 
 variables: 
   system.debug: 'true'
 
 steps:
-
 
 - task: PowerBIActions@5
   inputs:
@@ -21,6 +20,13 @@ steps:
     WorkspaceName: 'testing_ws'
     Name: 'myname'
 
+- task: PowerBIActions@5
+  inputs:
+    Action: 'AddGroup'
+    WorkspaceName: 'testing_ws'
+    GroupObjectIds: '5f543377-1b5c-4bf0-9760-6413d8466c70'
+    Permission: 'Admin'
+    
 - task: PowerBIActions@5
   inputs:
     PowerBIServiceEndpoint: 'PBI Service Connection'
