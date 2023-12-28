@@ -13,17 +13,17 @@ variables:
   system.debug: 'true'
 
 steps:
-
-- task: PowerBIActions@5
+- task: maikvandergaag.maikvandergaag-power-bi-actions.PowerBIActions.PowerBIActions@5
+  displayName: 'Power BI Action: Create Workspace'
   inputs:
-    Action: 'Workspace'
-    WorkspaceName: 'testing_ws'
-    Name: 'myname'
+    PowerBIServiceEndpoint: 'PBI Service Connection'
+    Action: Workspace
+    WorkspaceName: baselinews
 
 - task: PowerBIActions@5
   inputs:
     Action: 'AddGroup'
-    WorkspaceName: 'testing_ws'
+    WorkspaceName: 'baselinews'
     GroupObjectIds: '5f543377-1b5c-4bf0-9760-6413d8466c70'
     Permission: 'Admin'
     
