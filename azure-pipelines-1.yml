@@ -14,15 +14,15 @@ variables:
 
 steps:
 
+
+- task: PowerBIActions@5
+  inputs:
+    Action: 'Workspace'
+    WorkspaceName: 'testing_ws'
+
 - task: PowerBIActions@5
   inputs:
     PowerBIServiceEndpoint: 'PBI Service Connection'
     Action: 'Publish'
     WorkspaceName: 'workingtest_ws'
     PowerBIPath: '**/sqlserversourcedata.pbix'
-
-
-- task: PowerBIActions@5
-  inputs:
-    Action: 'Workspace'
-    WorkspaceName: 'testing_ws'
