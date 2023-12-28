@@ -35,17 +35,3 @@ steps:
     Create: false
     ServicePrincipals: '9043ed8f-e4b7-4484-afd3-69194d8095e1'
     Permission: 'Admin'
-    
-- task: PowerBIActions@5
-  inputs:
-    Action: 'AddGroup'
-    WorkspaceName: 'baselinews'
-    GroupObjectIds: '5f543377-1b5c-4bf0-9760-6413d8466c70'
-    Permission: 'Admin'
-    
-- task: PowerBIActions@5
-  inputs:
-    PowerBIServiceEndpoint: 'PBI Service Connection'
-    Action: 'Publish'
-    WorkspaceName: 'workingtest_ws'
-    PowerBIPath: '**/sqlserversourcedata.pbix'
